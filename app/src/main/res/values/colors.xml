@@ -19,5 +19,34 @@
 
     <color name="grey_medium2">#b4b8bf</color>
     <color name="fb_color">#1E599B</color>
+    <color name="exam_tab_border">#FF647C</color>
+    <color name="onboarding_item_desc">#787a80</color>
+
+
+
+
+    <color name="ggl_bg">#D8D8D8</color>
+
+    <color name="signtext">#121212</color>
+    <color name="gglborder">#D8D8D8</color>
+    <color name="active">#EF3D56</color>
+    <color name="title_large">#666666</color>
+    <color name="caption">#999999</color>
+
+
+
+    <color name="signUp">
+        #333333</color>
+    <color name="signUp_subtitle">
+        #979797</color>
+
+    <color name="mobileno">#272D39</color>
+    <color name="text_f_border">
+        #D8D8D8</color>
+    <color name="mobileText">#272D39</color>
+    <color name="forgot_pass">
+        #4EAEFF</color>
+    <color name="invalid_user">
+        #FFEDEF</color>
 
 </resources>

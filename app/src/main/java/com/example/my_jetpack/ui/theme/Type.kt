@@ -16,7 +16,7 @@ val Typography = Typography(
         fontSize = 16.sp,
         lineHeight = 24.sp,
         letterSpacing = 0.5.sp
-    )
+    ),
 )
 val latofamily = FontFamily(
     Font(R.font.lato_bold, FontWeight.Bold),
@@ -26,6 +26,9 @@ val latofamily = FontFamily(
     Font(R.font.latoregular, FontWeight.Normal)
 )
 
+val robotofamily = FontFamily(
+    Font(R.font.roboto_bold , FontWeight.Bold)
+)
 /* Other default text styles to override
 titleLarge = TextStyle(
     fontFamily = FontFamily.Default,

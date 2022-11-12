@@ -3,6 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/My_jetpack/app/src/main/res/drawable-v24/ic_fb_icon.xml" value="0.1765" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/My_jetpack/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/My_jetpack/app/src/main/res/drawable/ic_adda_new_exam.xml" value="0.1765" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/My_jetpack/app/src/main/res/drawable/ic_back.xml" value="0.114" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/My_jetpack/app/src/main/res/drawable/ic_group_104.xml" value="0.1765" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/My_jetpack/app/src/main/res/drawable/ic_group_185.xml" value="0.1" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/My_jetpack/app/src/main/res/drawable/ic_mobile.xml" value="0.1765" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/My_jetpack/app/src/main/res/drawable/ic_shape.xml" value="0.1765" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/My_jetpack/app/src/main/res/layout/activity_main.xml" value="0.15885416666666666" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/My_jetpack/app/src/main/res/layout/activity_main2.xml" value="0.1" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/My_jetpack/app/src/main/res/layout/activity_otp.xml" value="0.14266304347826086" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/My_jetpack/app/src/main/res/layout/fragment_blank.xml" value="0.25" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/flutter_app11/My_jetpack/app/src/main/res/drawable-v24/ic_fb_icon.xml" value="0.1255" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/flutter_app11/My_jetpack/app/src/main/res/drawable-v24/ic_group_91.xml" value="0.204" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/flutter_app11/My_jetpack/app/src/main/res/drawable-v24/top_1.xml" value="0.1655" />

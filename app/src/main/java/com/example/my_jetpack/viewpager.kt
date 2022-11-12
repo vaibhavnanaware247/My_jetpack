@@ -28,6 +28,8 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.adda247.modules.login.pager
+import com.adda247.modules.login.pagerList
 import com.example.my_jetpack.ui.theme.latofamily
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
@@ -46,33 +48,27 @@ class viewpager {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
 
             HorizontalPager(
-                count = pagerlist.size,
+                count = pagerList.size,
                 state = pageState,
                 modifier = Modifier.fillMaxWidth()
 
             ) { pager ->
-                PageItem(pager = pagerlist[pager])
+                PageItem(pager = pagerList[pager])
 
             }
             HorizontalPagerIndicator(
                 pagerState = pageState,
                 modifier = Modifier.padding(top = 22.dp, bottom = 22.dp)
             )
-
         }
         LaunchedEffect(Unit) {
             while (true) {
                 delay(3000)
                 val Topage = (pageState.currentPage + 1) % pageState.pageCount
-
-
                 tween<Float>(600)
                 pageState.animateScrollToPage(page = Topage)
-
-
             }
         }
-
     }
 
     @OptIn(ExperimentalPagerApi::class)
@@ -82,7 +78,7 @@ class viewpager {
         modifier: Modifier = Modifier,
         activeColor: Color = LocalContentColor.current.copy(alpha = LocalContentAlpha.current),
         inactiveColor: Color = activeColor.copy(ContentAlpha.disabled),
-        indicatorWidth: Dp = 7.dp,
+        indicatorWidth: Dp = 6.dp,
         indicatorHeight: Dp = indicatorWidth,
         spacing: Dp = indicatorWidth,
         indicatorShape: Shape = CircleShape,
@@ -119,21 +115,17 @@ class viewpager {
                                     .toFloat()
                             )
                         IntOffset(
-                            x = ((spacingPx + indicatorWidthPx) * scrollPosition).toInt() - 5,
+                            x = ((spacingPx + indicatorWidthPx) * scrollPosition).toInt(),
                             y = 0
                         )
                     }
                     .size(
-                        width = indicatorWidth + 6.dp,
-                        height = indicatorHeight + 6.dp
+                        width = indicatorWidth,
+                        height = indicatorHeight
                     )
                     .background(
-                        color = Color.White,
+                        color = colorResource(id = R.color.active),
                         shape = indicatorShape,
-                    )
-                    .border(
-                        BorderStroke(1.5.dp, color = colorResource(id = R.color.adda_red)),
-                        shape = indicatorShape
                     )
 
             )
@@ -144,41 +136,45 @@ class viewpager {
     fun PageItem(pager: pager) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Bottom
+            verticalArrangement = Arrangement.Bottom,
         ) {
 
             Image(
                 painter = painterResource(id = pager.image), modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(bottom = 50.dp), contentDescription = "vs"
+                    .fillMaxWidth(), contentDescription = "vs"
             )
 
+            Column(modifier = Modifier
+                .height(120.dp)
+                .background(color = Color.Red)) {
 
-            Text(
-                text = pager.title,
-                style = TextStyle(
-                    color = colorResource(id = R.color.adda_black),
-                    fontSize = 24.sp,
-                    fontFamily = latofamily,
-                    fontWeight = FontWeight.Medium
-                ),
-                textAlign = TextAlign.Center,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 60.dp, vertical = 15.dp)
-            )
-
-            Text(
-                text = stringResource(id = pager.caption), style = TextStyle(
-                    color = colorResource(
-                        id =
-                        R.color.textColorGrayMedium
-                    ), fontSize = 18.sp, fontFamily = latofamily, fontWeight = FontWeight.Normal
-                ), textAlign = TextAlign.Center, modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 50.dp)
-            )
+                Text(
+                    text = stringResource(id = pager.title),
+                    style = TextStyle(
+                        color = colorResource(id = R.color.title_large),
+                        fontSize = 22.sp,
+                        fontFamily = latofamily,
+                        fontWeight = FontWeight(600)
+                    ),
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 60.dp)
+                )
+                Spacer(modifier = Modifier.height(15.dp))
+                Text(
+                    text = stringResource(id = pager.caption), style = TextStyle(
+                        color = colorResource(
+                            id =
+                            R.color.caption
+                        ), fontSize = 16.sp, fontFamily = latofamily, fontWeight = FontWeight(400)
+                    ), textAlign = TextAlign.Center, modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 50.dp)
+                )
+            }
         }
+
 
     }
 }
